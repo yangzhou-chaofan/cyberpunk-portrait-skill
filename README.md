@@ -77,3 +77,13 @@ When no prompt is provided, the following default is used:
 ---
 
 Built with Claude Code · Powered by Neta
+
+## Example Output
+
+```bash
+node cyberpunkportrait.js "cyberpunk portrait, neon lights, futuristic city background, chrome accents, synthwave aesthetic, rain-slicked streets reflection, holographic displays, dramatic rim lighting, dystopian atmosphere"
+```
+
+![Example output](https://oss.talesofai.cn/picture/5e9ac784-a817-433b-ae28-23b03f289fa7.webp)
+
+> Prompt: *"cyberpunk portrait, neon lights, futuristic city background, chrome accents, synthwave aesthetic, rain-slicked streets reflection, holographic displays, dramatic rim lighting, dystopian atmosphere"*
