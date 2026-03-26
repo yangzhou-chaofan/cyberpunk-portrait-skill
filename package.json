@@ -1,1 +1,16 @@
-{"name":"cyberpunk-portrait-skill","version":"1.0.0","type":"module","description":"Cyberpunk Portrait Generator — AI-powered cyberpunk portrait generator ai","license":"MIT"}
+{
+  "name": "cyberpunk-portrait-skill",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Cyberpunk Portrait Generator — AI-powered cyberpunk portrait generator ai",
+  "license": "MIT",
+  "clawhub": {
+    "env": [
+      {
+        "name": "NETA_TOKEN",
+        "description": "Neta AI API token. Get it at https://www.neta.art/open/",
+        "required": true
+      }
+    ]
+  }
+}
