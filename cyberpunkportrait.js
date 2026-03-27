@@ -26,8 +26,41 @@ if (!prompt) {
 
 // --- Token resolution ---
 if (!token) {
-  console.error('\n✗ Token required. Pass via: --token YOUR_TOKEN');
-console.error('  Get yours at: https://www.neta.art/open/'); {
+  console.error(
+    "Error: No NETA_TOKEN found. Provide via --token, NETA_TOKEN env var, ~/.openclaw/workspace/.env, or ~/developer/clawhouse/.env"
+  );
+  process.exit(1);
+}
+
+// --- Size map ---
+const sizeMap = {
+  square: { width: 1024, height: 1024 },
+  portrait: { width: 832, height: 1216 },
+  landscape: { width: 1216, height: 832 },
+  tall: { width: 704, height: 1408 },
+};
+
+const { width, height } = sizeMap[size] || sizeMap["portrait"];
+
+// --- Headers ---
+const headers = {
+  "x-token": token,
+  "x-platform": "nieta-app/web",
+  "content-type": "application/json",
+};
+
+// --- Build request body ---
+const body = {
+  storyId: "DO_NOT_USE",
+  jobType: "universal",
+  rawPrompt: [{ type: "freetext", value: prompt, weight: 1 }],
+  width,
+  height,
+  meta: { entrance: "PICTURE,VERSE" },
+  context_model_series: "8_image_edit",
+};
+
+if (refUuid) {
   body.inherit_params = {
     collection_uuid: refUuid,
     picture_uuid: refUuid,
