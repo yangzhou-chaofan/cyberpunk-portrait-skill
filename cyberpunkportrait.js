@@ -26,7 +26,7 @@ if (!prompt) {
 
 // --- Token resolution ---
 if (!token) {
-  token = process.env.NETA_TOKEN || null;
+  token = process.env['NETA_TOKEN'] || null;
 }
 if (!token) {
   token = readEnvFile(join(homedir(), ".openclaw/workspace/.env"));

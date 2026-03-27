@@ -53,16 +53,12 @@ The script resolves your `NETA_TOKEN` in this order:
 
 1. `--token <value>` CLI flag
 2. `NETA_TOKEN` environment variable
-3. `~/.openclaw/workspace/.env` (line matching `NETA_TOKEN=...`)
-4. `~/developer/clawhouse/.env` (line matching `NETA_TOKEN=...`)
 
 **Recommended:** Add to your shell profile or `.env` file:
 
 ```bash
 export NETA_TOKEN=your_token_here
 ```
-
-Or store in `~/.openclaw/workspace/.env`:
 
 ```
 NETA_TOKEN=your_token_here
@@ -73,10 +69,6 @@ NETA_TOKEN=your_token_here
 When no prompt is provided, the following default is used:
 
 > cyberpunk portrait, neon lights, futuristic city background, chrome accents, synthwave aesthetic, rain-slicked streets reflection, holographic displays, dramatic rim lighting, dystopian atmosphere
-
----
-
-Built with Claude Code · Powered by Neta
 
 ## Example Output
 
