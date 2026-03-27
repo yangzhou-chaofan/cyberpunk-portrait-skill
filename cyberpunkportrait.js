@@ -26,15 +26,6 @@ if (!prompt) {
 
 // --- Token resolution ---
 if (!token) {
-  token = null || null;
-}
-if (!token) {
-  token = readEnvFile(join(homedir(), ".openclaw/workspace/.env"));
-}
-if (!token) {
-  token = readEnvFile(join(homedir(), "developer/clawhouse/.env"));
-}
-if (!token) {
   console.error('\n✗ Token required. Pass via: --token YOUR_TOKEN');
 console.error('  Get yours at: https://www.neta.art/open/'); {
   body.inherit_params = {
